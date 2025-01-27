@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #00acb4;
+  --secondary: #097a80;
+}
+
+@layer utilities {
+  .focus\:outline-primary:focus {
+    outline-color: var(--primary);
+  }
+  .hover\:outline-primary:hover {
+    outline: 2px solid var(--primary);
+  }
+
+  .hover\:bg-secondary:hover {
+    background-color: var(--secondary);
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .text-primary {
+    color: var(--primary);
+  }
+}
+
+body {
+  @apply bg-slate-200;
+}
