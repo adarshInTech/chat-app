@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import uploadFile from "../helpers/uploadFile";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -13,6 +13,7 @@ const RegisterPage = () => {
     profile_pic: "",
   });
 
+  const navigate = useNavigate();
   const [uploadPhoto, setUploadPhoto] = useState("");
 
   const handleUploadPhoto = async (e) => {
@@ -73,6 +74,8 @@ const RegisterPage = () => {
           password: "",
           profile_pic: "",
         });
+
+        navigate("/email");
       }
     } catch (error) {
       // More detailed error handling
