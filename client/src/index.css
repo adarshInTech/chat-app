@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root {
   --primary: #00acb4;
   --secondary: #097a80;
@@ -16,12 +15,33 @@
   .hover\:bg-secondary:hover {
     background-color: var(--secondary);
   }
+  .hover\:bg-primary:hover {
+    background-color: var(--primary);
+  }
 
   .bg-primary {
     background-color: var(--primary);
   }
   .text-primary {
     color: var(--primary);
+  }
+  .border-primary {
+    border: var(--primary);
+  }
+  .fill-primary {
+    fill: var(--primary);
+  }
+}
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full;
   }
 }
 
